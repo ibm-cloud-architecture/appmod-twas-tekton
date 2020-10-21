@@ -15,7 +15,7 @@ spec:
         app: customerorderservicesapp
     spec:
       containers:
-        - image: docker.io/application
+        - image: cos-twas
           imagePullPolicy: Always
           name: customerorderservicesapp
           ports:
