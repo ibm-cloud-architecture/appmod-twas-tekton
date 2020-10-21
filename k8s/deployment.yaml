@@ -15,7 +15,7 @@ spec:
         app: customerorderservicesapp
     spec:
       containers:
-        - image: cos-twas
+        - image: image-registry.openshift-image-registry.svc:5000/cos-liberty-tekton/cos-twas
           imagePullPolicy: Always
           name: customerorderservicesapp
           ports:
