@@ -55,7 +55,6 @@
             <ejbModule>
               <groupId>org.pwte.example</groupId>
               <artifactId>CustomerOrderServices</artifactId>
-              <bundleFileName>CustomerOrderServices.jar</bundleFileName>
             </ejbModule>
             <webModule>
               <groupId>org.pwte.example</groupId>
@@ -69,7 +68,7 @@
             </webModule>
           </modules>
           <earSourceDirectory>${basedir}</earSourceDirectory>
-          <earSourceIncludes>**/ibmconfig/**,**/ibm-application-bnd.xml,lib/**</earSourceIncludes>
+          <earSourceIncludes>**/ibm-application-bnd.xml</earSourceIncludes>
           <earSourceExcludes>**/target/**</earSourceExcludes>
           <security>
             <security-role>
