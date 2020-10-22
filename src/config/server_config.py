@@ -62,7 +62,7 @@ AdminConfigVar_3=AdminConfig.showAttribute(AdminConfigVar_1, 'connectionPool')
 AdminConfig.modify(AdminConfigVar_3, [['stuckThreshold', '0'], ['reapTime', '180'], ['testConnectionInterval', '0'], ['connectionTimeout', '180'], ['surgeCreationInterval', '0'], ['surgeThreshold', '-1'], ['stuckTimerTime', '0'], ['numberOfFreePoolPartitions', '0'], ['minConnections', '1'], ['unusedTimeout', '1800'], ['agedTimeout', '0'], ['numberOfSharedPoolPartitions', '0'], ['purgePolicy', 'EntirePool'], ['maxConnections', '10'], ['freePoolDistributionTableSize', '0'], ['stuckTime', '0'], ['testConnection', 'false'], ['numberOfUnsharedPoolPartitions', '0']])
 
 print 'Starting Creating Variables'
-AdminTask.setVariable(['-scope', 'Node=' + NodeName, '-variableName', 'DB2_JCC_DRIVER_PATH', '-variableValue', '/opt/ibm/db2/V11.5/java'])
+AdminTask.setVariable(['-scope', 'Node=' + NodeName, '-variableName', 'DB2_JCC_DRIVER_PATH', '-variableValue', '/work/config/lib'])
 AdminTask.setVariable(['-scope', 'Node=' + NodeName, '-variableName', 'UNIVERSAL_JDBC_DRIVER_PATH', '-variableValue', '${WAS_INSTALL_ROOT}/universalDriver/lib'])
 
 print 'Starting Saving Configuration Changes Before Application Deployment'
