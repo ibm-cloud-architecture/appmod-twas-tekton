@@ -65,6 +65,15 @@ print 'Starting Creating Variables'
 AdminTask.setVariable(['-scope', 'Node=' + NodeName, '-variableName', 'DB2_JCC_DRIVER_PATH', '-variableValue', '/work/config/lib'])
 AdminTask.setVariable(['-scope', 'Node=' + NodeName, '-variableName', 'UNIVERSAL_JDBC_DRIVER_PATH', '-variableValue', '/work/config/lib'])
 
+print 'Set JPA 2.0 and JAX-RS 1.1 (non-default versions)'
+# Configuring JPA Specification
+AdminTask.listSupportedJPASpecifications('[-versionOnly]')
+AdminTask.showJPASpecLevel(Server)
+AdminTask.modifyJPASpecLevel(Server, '[ -specLevel 2.0]')
+AdminTask.showJPASpecLevel(Server)
+# Configuring JAX-RS Specification
+AdminTask.modifyJaxrsProvider(Server, '[ -provider 1.1]')
+
 print 'Starting Saving Configuration Changes Before Application Deployment'
 AdminConfig.save()
 print 'Starting Application Deployment'
