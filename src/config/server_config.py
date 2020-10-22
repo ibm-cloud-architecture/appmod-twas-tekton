@@ -63,7 +63,7 @@ AdminConfig.modify(AdminConfigVar_3, [['stuckThreshold', '0'], ['reapTime', '180
 
 print 'Starting Creating Variables'
 AdminTask.setVariable(['-scope', 'Node=' + NodeName, '-variableName', 'DB2_JCC_DRIVER_PATH', '-variableValue', '/work/config/lib'])
-AdminTask.setVariable(['-scope', 'Node=' + NodeName, '-variableName', 'UNIVERSAL_JDBC_DRIVER_PATH', '-variableValue', '${WAS_INSTALL_ROOT}/universalDriver/lib'])
+AdminTask.setVariable(['-scope', 'Node=' + NodeName, '-variableName', 'UNIVERSAL_JDBC_DRIVER_PATH', '-variableValue', '/work/config/lib'])
 
 print 'Starting Saving Configuration Changes Before Application Deployment'
 AdminConfig.save()
